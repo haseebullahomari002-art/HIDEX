@@ -3,40 +3,38 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b0b14">
 <title>HIDEX Security</title>
 
 <style>
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
     min-height: 100vh;
-    background: radial-gradient(circle at top, #242044, #0b0b14 65%);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at top, #29204c, #0b0b14 65%);
     color: white;
     font-family: Tahoma, Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
 }
 
 .container {
     width: 100%;
     max-width: 460px;
+    padding: 25px;
     background: #171727;
     border: 1px solid #393452;
     border-radius: 20px;
-    padding: 25px;
     box-shadow: 0 0 35px #7850ff22;
 }
 
 .logo {
     text-align: center;
-    font-size: 34px;
+    font-size: 36px;
     font-weight: bold;
     letter-spacing: 5px;
     color: #22d3ee;
@@ -49,31 +47,31 @@ h2 {
 
 p {
     color: #c3c0d4;
-    line-height: 2;
     font-size: 14px;
+    line-height: 2;
 }
 
 .info {
+    padding: 15px;
+    margin: 20px 0;
     background: #242239;
     border: 1px solid #494064;
     border-radius: 12px;
-    padding: 15px;
-    margin: 20px 0;
 }
 
 label {
     display: flex;
     gap: 10px;
-    line-height: 1.8;
-    font-size: 14px;
     margin: 20px 0;
+    font-size: 14px;
+    line-height: 1.8;
 }
 
 input {
     width: 18px;
     height: 18px;
-    flex-shrink: 0;
     margin-top: 5px;
+    flex-shrink: 0;
     accent-color: #8b5cf6;
 }
 
@@ -81,48 +79,53 @@ button, .web-link {
     display: block;
     width: 100%;
     padding: 15px;
+    margin-top: 12px;
     border: none;
     border-radius: 12px;
-    background: linear-gradient(100deg, #8b5cf6, #2563eb);
-    color: white;
+    text-align: center;
     font-size: 15px;
     font-weight: bold;
-    cursor: pointer;
-    text-align: center;
     text-decoration: none;
-    margin-top: 12px;
+    cursor: pointer;
+}
+
+button {
+    color: white;
+    background: linear-gradient(100deg, #8b5cf6, #2563eb);
 }
 
 button:disabled {
-    opacity: 0.4;
+    opacity: .4;
     cursor: not-allowed;
 }
 
 .web-link {
+    color: white;
     background: #242239;
     border: 1px solid #494064;
 }
 
 #status {
-    text-align: center;
+    min-height: 35px;
+    margin-top: 15px;
     color: #22d3ee;
+    text-align: center;
     font-size: 13px;
     line-height: 1.8;
-    margin-top: 15px;
 }
 
 .footer {
+    margin-top: 20px;
+    color: #88849e;
     text-align: center;
     font-size: 12px;
-    color: #88849e;
-    margin-top: 20px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="container">
+<main class="container">
 
     <div class="logo">HIDEX</div>
 
@@ -130,32 +133,34 @@ button:disabled {
 
     <p>
         به صفحه امنیتی HIDEX خوش آمدید.
-        قبل از ادامه، لطفاً معلومات زیر را بخوانید.
+        پیش از ادامه، معلومات زیر را بخوانید.
     </p>
 
-    <div class="info">
-        <p><b>چه کاری انجام می‌شود؟</b></p>
+    <section class="info">
+        <p><strong>چه اتفاقی می‌افتد؟</strong></p>
 
         <p>
-            با تأیید شما، تلاش می‌کنیم برنامه رسمی
-            WhatsApp Business را در گوشی باز کنیم.
+            با اجازه شما، HIDEX تلاش می‌کند
+            WhatsApp Business نصب‌شده در گوشی را باز کند.
         </p>
 
         <p>
-            این صفحه رمز، پیام‌ها، کد تأیید یا اطلاعات
-            حساب شما را جمع‌آوری نمی‌کند.
+            این صفحه هیچ رمز، پیام، کد تأیید،
+            QR ورود یا اطلاعات حساب شما را دریافت نمی‌کند.
         </p>
 
         <p>
-            برای اتصال حساب به کمپیوتر، باید خودتان
-            اتصال را از بخش Linked Devices تأیید کنید.
+            برای اتصال حساب به کمپیوتر،
+            باید خودتان از بخش Linked Devices
+            در واتساپ اتصال را تأیید کنید.
         </p>
-    </div>
+    </section>
 
     <label>
         <input type="checkbox" id="agree">
         <span>
-            معلومات را خواندم و با بازشدن واتساپ بیزنس موافق هستم.
+            مطالب را خواندم و اجازه می‌دهم
+            WhatsApp Business باز شود.
         </span>
     </label>
 
@@ -173,39 +178,39 @@ button:disabled {
     <div id="status" role="status" aria-live="polite"></div>
 
     <div class="footer">
-        HIDEX Security • Consent Required
+        HIDEX SECURITY • USER CONSENT REQUIRED
     </div>
 
-</div>
+</main>
 
 <script>
 const agree = document.getElementById("agree");
 const button = document.getElementById("continue");
 const statusBox = document.getElementById("status");
 
-agree.addEventListener("change", function () {
+agree.addEventListener("change", () => {
     button.disabled = !agree.checked;
 });
 
-button.addEventListener("click", function () {
+button.addEventListener("click", () => {
 
     if (!agree.checked) return;
 
     statusBox.textContent =
-        "در حال بازکردن WhatsApp Business...";
+        "درخواست بازکردن WhatsApp Business ارسال شد...";
 
-    const fallback =
-        "https://www.whatsapp.com/";
-
-    const intent =
-        "intent://send/#Intent;" +
+    const appLink =
+        "intent://send?text=#Intent;" +
         "scheme=whatsapp;" +
         "package=com.whatsapp.w4b;" +
-        "S.browser_fallback_url=" +
-        encodeURIComponent(fallback) +
-        ";end";
+        "end";
 
-    window.location.href = intent;
+    window.location.href = appLink;
+
+    setTimeout(() => {
+        statusBox.textContent =
+            "اگر برنامه باز نشد، WhatsApp Business را خودتان از گوشی باز کنید.";
+    }, 2500);
 });
 </script>
 
